@@ -6,11 +6,7 @@ import labs.akagi.articulos.respuesta.Respuesta;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-/*
-TODO:
-    Crear métodos para buscar y eliminar por clave
-    Revisar la clase de Evento
- */
+//TODO: Revisar la clase de Evento
 
 @Service
 public class ImpArticulos implements MetodosArticulo {
@@ -61,6 +57,16 @@ public class ImpArticulos implements MetodosArticulo {
             return new Respuesta("No se encontró el ID, pruebe de nuevo", null, false);
     }
 
+    public Respuesta buscarClave(String clave) {
+        if (daoA.findAll().isEmpty())
+            return new Respuesta("La base de datos está vacía, nada por buscar", null, false);
+        else if (daoA.existsByClave(clave)) {
+            Articulo a = daoA.findByClave(clave).orElse(null);
+            return new Respuesta("Se encontró lo siguiente:", a, true);
+        } else
+            return new Respuesta("No existe la clave en la base de datos", null, false);
+    }
+
     @Override
     public Respuesta eliminar(Integer id) {
         if (daoA.findAll().isEmpty())
@@ -72,5 +78,17 @@ public class ImpArticulos implements MetodosArticulo {
             return new Respuesta("El artículo se eliminó correctamente", tmp, true);
         } else
             return new Respuesta("No se encontró el artículo, pruebe de nuevo", null, false);
+    }
+
+    public Respuesta eliminarClave(String clave) {
+        if (daoA.findAll().isEmpty())
+            return new Respuesta("Base de datos vacía, nada para eliminar", null, false);
+        else if (daoA.existsByClave(clave)) {
+            Articulo tmp = daoA.findByClave(clave).orElse(null);
+            daoA.deleteByClave(clave);
+            // Clase Evento
+            return new Respuesta("Artículo eliminado correctamente", tmp, true);
+        } else
+            return new Respuesta("No se encontró la clave", null, false);
     }
 }
