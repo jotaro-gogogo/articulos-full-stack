@@ -1,0 +1,11 @@
+/home/jotaro/Programación/Java/Spring/articulos/src/main/java/labs/akagi/articulos/articulos/service/ImpArticulos.java
+/home/jotaro/Programación/Java/Spring/articulos/src/main/java/labs/akagi/articulos/eventos/dao/DaoEvento.java
+/home/jotaro/Programación/Java/Spring/articulos/src/main/java/labs/akagi/articulos/ArticulosApplication.java
+/home/jotaro/Programación/Java/Spring/articulos/src/main/java/labs/akagi/articulos/eventos/entity/Evento.java
+/home/jotaro/Programación/Java/Spring/articulos/src/main/java/labs/akagi/articulos/respuesta/Respuesta.java
+/home/jotaro/Programación/Java/Spring/articulos/src/main/java/labs/akagi/articulos/articulos/entity/Articulo.java
+/home/jotaro/Programación/Java/Spring/articulos/src/main/java/labs/akagi/articulos/articulos/dao/DaoArticulo.java
+/home/jotaro/Programación/Java/Spring/articulos/src/main/java/labs/akagi/articulos/articulos/service/MetodosArticulo.java
+/home/jotaro/Programación/Java/Spring/articulos/src/main/java/labs/akagi/articulos/eventos/service/ImpEventos.java
+/home/jotaro/Programación/Java/Spring/articulos/src/main/java/labs/akagi/articulos/eventos/service/MetodosEvento.java
+/home/jotaro/Programación/Java/Spring/articulos/src/main/java/labs/akagi/articulos/articulos/controller/ArticuloWS.java
