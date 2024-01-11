@@ -6,6 +6,10 @@ create table articulos (
 	precio double not null
 );
 
+alter table articulos
+add check (char_length(clave) >= 3 and char_length(clave) <= 30),
+add check (char_length(nombre) <= 30);
+
 create table eventos (
 	id integer primary key auto_increment not null,
 	evento varchar(10) not null,
