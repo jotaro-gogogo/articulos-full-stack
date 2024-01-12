@@ -1,4 +1,4 @@
-package labs.akagi.articulos.respuesta;
+package labs.akagi.articulos.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,7 +9,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @ToString
 @Data
-public class Respuesta {
+public class Response {
     private String msg;
     private Object obj;
     private Boolean success;

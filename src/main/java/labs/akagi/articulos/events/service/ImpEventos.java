@@ -1,6 +1,6 @@
-package labs.akagi.articulos.eventos.service;
+package labs.akagi.articulos.events.service;
 
-import labs.akagi.articulos.respuesta.Respuesta;
+import labs.akagi.articulos.response.Response;
 
 /*
 TODO:
@@ -8,27 +8,27 @@ TODO:
  */
 public class ImpEventos implements MetodosEvento {
     @Override
-    public Respuesta guardar(String evento) {
+    public Response guardar(String evento) {
         return null;
     }
 
     @Override
-    public Respuesta editar(Integer id) {
+    public Response editar(Integer id) {
         return null;
     }
 
     @Override
-    public Respuesta mostrar() {
+    public Response mostrar() {
         return null;
     }
 
     @Override
-    public Respuesta buscar(Integer id) {
+    public Response buscar(Integer id) {
         return null;
     }
 
     @Override
-    public Respuesta eliminar(Integer id) {
+    public Response eliminar(Integer id) {
         return null;
     }
 }

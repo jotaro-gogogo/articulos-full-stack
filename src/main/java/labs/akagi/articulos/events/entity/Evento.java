@@ -1,4 +1,4 @@
-package labs.akagi.articulos.eventos.entity;
+package labs.akagi.articulos.events.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

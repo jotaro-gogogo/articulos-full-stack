@@ -1,4 +1,4 @@
-package labs.akagi.articulos.articulos.entity;
+package labs.akagi.articulos.products.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -15,16 +15,16 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 @Data
-public class Articulo {
+public class Product {
     @Id
     @Column(name = "id")
     private Integer id;
-    @Column(name = "nombre")
-    private String nombre;
-    @Column(name = "unidad")
-    private String unidad;
-    @Column(name = "clave")
-    private String clave;
-    @Column(name = "precio")
-    private Double precio;
+    @Column(name = "name")
+    private String name;
+    @Column(name = "unit")
+    private String unit;
+    @Column(name = "product_key")
+    private String productKey;
+    @Column(name = "price")
+    private Double price;
 }
