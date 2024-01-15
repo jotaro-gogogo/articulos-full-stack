@@ -6,7 +6,7 @@ import labs.akagi.articulos.response.Response;
 TODO:
     Realmente debo permitir editar/eliminar los eventos?
  */
-public class ImpEventos implements MetodosEvento {
+public class EventImp implements EventMethods {
     @Override
     public Response guardar(String evento) {
         return null;
