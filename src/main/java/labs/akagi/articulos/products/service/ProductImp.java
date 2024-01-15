@@ -16,7 +16,7 @@ public class ProductImp implements ProductMethods {
     @Autowired
     ProductDao pDao;
 
-    List<String> units = Arrays.asList("PIEZA", "KILOGRAMO", "PULGADA", "LITRO");
+    List<String> units = Arrays.asList("PIECE", "KILOGRAM", "INCH", "LITER");
 
     @Override
     public Response pSave(Product p) {
