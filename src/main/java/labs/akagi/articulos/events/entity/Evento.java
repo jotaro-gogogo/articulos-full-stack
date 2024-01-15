@@ -6,8 +6,10 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import java.sql.Date;
+
 @Entity
-@Table(name = "eventos")
+@Table(name = "events_log")
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
@@ -17,6 +19,8 @@ public class Evento {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Integer id;
-    @Column(name = "evento")
-    private String evento;
+    @Column(name = "txn")
+    private String txn;
+    @Column(name = "txn_date")
+    private Date txnDate;
 }
