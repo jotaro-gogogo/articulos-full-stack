@@ -14,7 +14,7 @@ import java.sql.Date;
 @NoArgsConstructor
 @ToString
 @Data
-public class Evento {
+public class Event {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
