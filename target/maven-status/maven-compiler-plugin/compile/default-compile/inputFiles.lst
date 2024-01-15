@@ -1,11 +1,11 @@
-/home/jotaro/Programación/Java/Spring/articulos/src/main/java/labs/akagi/articulos/articulos/service/ImpArticulos.java
-/home/jotaro/Programación/Java/Spring/articulos/src/main/java/labs/akagi/articulos/eventos/dao/DaoEvento.java
-/home/jotaro/Programación/Java/Spring/articulos/src/main/java/labs/akagi/articulos/ArticulosApplication.java
-/home/jotaro/Programación/Java/Spring/articulos/src/main/java/labs/akagi/articulos/eventos/entity/Evento.java
-/home/jotaro/Programación/Java/Spring/articulos/src/main/java/labs/akagi/articulos/respuesta/Respuesta.java
-/home/jotaro/Programación/Java/Spring/articulos/src/main/java/labs/akagi/articulos/articulos/entity/Articulo.java
-/home/jotaro/Programación/Java/Spring/articulos/src/main/java/labs/akagi/articulos/articulos/dao/DaoArticulo.java
-/home/jotaro/Programación/Java/Spring/articulos/src/main/java/labs/akagi/articulos/articulos/service/MetodosArticulo.java
-/home/jotaro/Programación/Java/Spring/articulos/src/main/java/labs/akagi/articulos/eventos/service/ImpEventos.java
-/home/jotaro/Programación/Java/Spring/articulos/src/main/java/labs/akagi/articulos/eventos/service/MetodosEvento.java
-/home/jotaro/Programación/Java/Spring/articulos/src/main/java/labs/akagi/articulos/articulos/controller/ArticuloWS.java
+/home/jotaro/Programación/Full Stack/Spring/articulos-full-stack/src/main/java/labs/akagi/articulos/products/service/ProductImp.java
+/home/jotaro/Programación/Full Stack/Spring/articulos-full-stack/src/main/java/labs/akagi/articulos/products/controller/ProductWS.java
+/home/jotaro/Programación/Full Stack/Spring/articulos-full-stack/src/main/java/labs/akagi/articulos/products/entity/Product.java
+/home/jotaro/Programación/Full Stack/Spring/articulos-full-stack/src/main/java/labs/akagi/articulos/products/service/ProductMethods.java
+/home/jotaro/Programación/Full Stack/Spring/articulos-full-stack/src/main/java/labs/akagi/articulos/ArticulosApplication.java
+/home/jotaro/Programación/Full Stack/Spring/articulos-full-stack/src/main/java/labs/akagi/articulos/products/dao/ProductDao.java
+/home/jotaro/Programación/Full Stack/Spring/articulos-full-stack/src/main/java/labs/akagi/articulos/events/service/ImpEventos.java
+/home/jotaro/Programación/Full Stack/Spring/articulos-full-stack/src/main/java/labs/akagi/articulos/events/dao/DaoEvento.java
+/home/jotaro/Programación/Full Stack/Spring/articulos-full-stack/src/main/java/labs/akagi/articulos/response/Response.java
+/home/jotaro/Programación/Full Stack/Spring/articulos-full-stack/src/main/java/labs/akagi/articulos/events/service/MetodosEvento.java
+/home/jotaro/Programación/Full Stack/Spring/articulos-full-stack/src/main/java/labs/akagi/articulos/events/entity/Evento.java

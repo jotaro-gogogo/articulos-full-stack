@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 @Entity
-@Table(name = "articulos")
+@Table(name = "products")
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
