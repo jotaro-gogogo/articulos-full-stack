@@ -20,7 +20,7 @@ public class ProductWS {
 
     @PostMapping("edit")
     Response pEditWS(@RequestBody Product p) {
-        return imp.pEdit(p);
+        return imp.pUpdate(p);
     }
 
     @PostMapping("delete")

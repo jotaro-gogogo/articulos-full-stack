@@ -7,7 +7,7 @@ public interface ProductMethods {
     // Basic CRUD
     Response pSave(Product p);
 
-    Response pEdit(Product p);
+    Response pUpdate(Product p);
 
     Response pShow();
 
