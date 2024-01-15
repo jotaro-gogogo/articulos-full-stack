@@ -6,7 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-import java.sql.Date;
+import java.sql.Timestamp;
 
 @Entity
 @Table(name = "events_log")
@@ -22,5 +22,5 @@ public class Event {
     @Column(name = "txn")
     private String txn;
     @Column(name = "txn_date")
-    private Date txnDate;
+    private Timestamp txnDate;
 }

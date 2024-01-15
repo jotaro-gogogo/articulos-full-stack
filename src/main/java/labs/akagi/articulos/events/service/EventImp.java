@@ -3,7 +3,9 @@ package labs.akagi.articulos.events.service;
 import labs.akagi.articulos.events.dao.EventDao;
 import labs.akagi.articulos.response.Response;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class EventImp implements EventMethods {
     @Autowired
     EventDao eDao;
