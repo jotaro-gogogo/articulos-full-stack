@@ -39,7 +39,6 @@ begin
 	insert into events_log(txn, txn_date) values("INSERT", now());
 end;
 
-
 create trigger events_log_update
 after update on products
 for each row

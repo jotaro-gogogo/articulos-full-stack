@@ -1,6 +1,6 @@
 labs/akagi/articulos/events/entity/Event.class
-labs/akagi/articulos/events/service/EventImp.class
 labs/akagi/articulos/events/controller/EventWS.class
+labs/akagi/articulos/events/service/EventImp.class
 labs/akagi/articulos/events/dao/EventDao.class
 labs/akagi/articulos/products/controller/ProductWS.class
 labs/akagi/articulos/response/Response.class
