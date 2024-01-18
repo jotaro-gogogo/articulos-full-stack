@@ -65,6 +65,8 @@ function loadEvents() {
         let table = document.getElementById("table-events");
 
         for(let i = 0; i < query.length; i++) {
+            let dateVal = convertDate(query[i].txnDate);
+
             let row = "";
             if (i%2 === 0)
                 row = '<tr class="table-light">';
@@ -75,7 +77,7 @@ function loadEvents() {
                 row +
                     '<td>' + query[i].id + '</td>' +
                     '<td>' + query[i].txn + '</td>' +
-                    '<td>' + query[i].txnDate + '</td>' +
+                    '<td>' + dateVal + '</td>' +
                 '</tr>';
         }
     })
@@ -84,6 +86,11 @@ function loadEvents() {
     })
 }
 
+function convertDate(date) {
+    date = date.replace(/T/, ' ');
+    date = date.split('+');
+    return date[0];
+}
 
 
 
