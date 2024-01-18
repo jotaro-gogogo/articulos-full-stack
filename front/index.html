@@ -16,12 +16,59 @@
             <button class="btn btn-outline-light me-2" id="events-btn" type="button">Events</button>
         </div>
         <div>
-            <button type="button" class="btn btn-primary">Add product</button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#insertModal" id="add-btn">Add product</button>
         </div>
       </form>
     </nav>
+
+    <!-- Modal to insert a new product into database -->
+    <div class="modal fade" id="insertModal" tabindex="-1" aria-labelledby="insertModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Register a new product</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <div class="input-group">
+                <span class="input-group-text">Name</span>
+                <input type="text" class="form-control" aria-describedby="basic-addon3 basic-addon4">
+              </div>
+              <div class="form-text">Max thirty (30) characters.</div>
+            </div>
+            <div class="mb-3">
+              <div class="input-group">
+                <span class="input-group-text">Unit</span>
+                <input type="text" class="form-control" aria-describedby="basic-addon3 basic-addon4">
+              </div>
+            </div>
+            <div class="mb-3">
+                <div class="input-group">
+                    <span class="input-group-text">Product Key</span>
+                    <input type="text" class="form-control" aria-describedby="basic-addon3 basic-addon4">
+                </div>
+                <div class="form-text">Between three (3) to thirty (30) characters.</div>
+            </div>
+            <div class="mb-3">
+                <div class="input-group">
+                    <span class="input-group-text">Price</span>
+                    <input type="text" class="form-control" aria-describedby="basic-addon3 basic-addon4">
+                </div>
+            </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" id="insert-btn">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
     <!-- Products table -->
-    <table class="table table-success text-center align-middle">
+    <table class="table table-success text-center align-middle" id="products-table">
         <thead>
             <tr>
                 <th scope="col">ID</th>
@@ -39,7 +86,7 @@
     </table>
 
     <!-- Events table -->
-    <table class="table table-dark text-center">
+    <table class="table table-dark text-center " id="events-table">
         <thead>
             <tr>
                 <th scope="col">ID</th>

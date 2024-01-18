@@ -1,3 +1,11 @@
+const productsBtn = document.getElementById('products-btn');
+const eventsBtn = document.getElementById('events-btn');
+const productsTable = document.getElementById('products-table');
+const eventsTable = document.getElementById('events-table');
+const insertBtn = document.getElementById('insert-btn');
+
+eventsTable.setAttribute("hidden", true);
+
 ready();
 
 function ready() {
@@ -91,6 +99,30 @@ function convertDate(date) {
     date = date.split('+');
     return date[0];
 }
+
+// Listeners
+productsBtn.addEventListener('click', () => {
+    productsBtn.classList.add('btn-outline-success');
+    productsBtn.classList.remove('btn-outline-light');
+
+    eventsBtn.classList.add('btn-outline-light');
+    eventsBtn.classList.remove('btn-outline-success');
+
+    productsTable.removeAttribute("hidden");
+    eventsTable.setAttribute("hidden", true);
+});
+
+eventsBtn.addEventListener('click', () => {
+    eventsBtn.classList.add('btn-outline-success');
+    eventsBtn.classList.remove('btn-outline-light');
+
+    productsBtn.classList.add('btn-outline-light');
+    productsBtn.classList.remove('btn-outline-success');
+
+    eventsTable.removeAttribute("hidden");
+    productsTable.setAttribute("hidden", true);
+});
+
 
 
 
