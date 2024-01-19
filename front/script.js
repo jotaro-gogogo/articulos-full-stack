@@ -4,8 +4,6 @@ const productsTable = document.getElementById('products-table');
 const eventsTable = document.getElementById('events-table');
 const insertBtn = document.getElementById('insert-btn');
 
-eventsTable.setAttribute("hidden", true);
-
 ready();
 
 function ready() {
@@ -123,6 +121,22 @@ eventsBtn.addEventListener('click', () => {
     productsTable.setAttribute("hidden", true);
 });
 
+insertBtn.addEventListener('click', () => {
+    let product = {
+        name = document.getElementById('product-name').value,
+        unit = document.getElementById('product-unit').value,
+        productKey = document.getElementById('product-key').value
+        price = document.getElementById('product-price').value
+    };
+    
+    /*fetch('http://localhost:9001/products/save', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application-json'
+        },
+        body: JSON.stringify(product)
+    });*/
+});
 
 
 
