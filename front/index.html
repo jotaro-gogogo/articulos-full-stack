@@ -73,6 +73,57 @@
       </div>
     </div>
 
+    <!-- Modal to update a product -->
+    <div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="insertModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Update product</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <div class="input-group">
+                <span class="input-group-text">Name</span>
+                <input type="text" class="form-control" aria-describedby="basic-addon3 basic-addon4" id="product-name">
+              </div>
+              <div class="form-text">Max thirty (30) characters.</div>
+            </div>
+            <div class="mb-3">
+              <div class="input-group">
+                <span class="input-group-text">Unit</span>
+                <input type="text" class="form-control" aria-describedby="basic-addon3 basic-addon4" id="product-unit" disabled>
+                  <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                  <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item" href="#">PIECE</a></li>
+                    <li><a class="dropdown-item" href="#">KILOGRAM</a></li>
+                    <li><a class="dropdown-item" href="#">INCH</a></li>
+                    <li><a class="dropdown-item" href="#">LITER</a></li>
+                  </ul>
+              </div>
+            </div>
+            <div class="mb-3">
+                <div class="input-group">
+                    <span class="input-group-text">Product Key</span>
+                    <input type="text" class="form-control" aria-describedby="basic-addon3 basic-addon4" id="product-key">
+                </div>
+                <div class="form-text">Between three (3) to thirty (30) characters.</div>
+            </div>
+            <div class="mb-3">
+                <div class="input-group">
+                    <span class="input-group-text">Price</span>
+                    <input type="number" class="form-control" aria-describedby="basic-addon3 basic-addon4" id="product-price">
+                </div>
+            </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" id="insert-btn">Update</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Products table -->
     <table class="table table-success text-center align-middle" id="products-table">

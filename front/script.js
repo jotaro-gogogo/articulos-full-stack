@@ -5,7 +5,6 @@ const eventsTable = document.getElementById('events-table');
 const insertBtn = document.getElementById('insert-btn');
 const listItems = document.querySelectorAll('ul li a');
 
-
 ready();
 
 function ready() {
@@ -24,7 +23,7 @@ function loadProducts() {
     .then(response => {
         if (!response.ok) {
             console.log("error");
-            throw new Error("Error");
+            throw new Error("No connection");
         }
         return response.json();
     })
@@ -40,22 +39,22 @@ function loadProducts() {
                 row = '<tr class="table-secondary">'
             table.innerHTML +=
                  row +
-                    '<td> ' + query[i].id + '</td>' +
+                    '<td>' + query[i].id + '</td>' +
                     '<td>' + query[i].name + '</td>' +
                     '<td>' + query[i].unit + '</td>' +
                     '<td>' + query[i].productKey + '</td>' +
                     '<td>' + query[i].price + '</td>' +
                     '<td>' +
-                        '<button class="btn btn-warning" type="button">Update</button>' +
+                        '<button class="btn btn-warning update-btn" type="button" data-bs-toggle="modal" data-bs-target="#updateModal">Update</button>' +
                     '</td>' +
                     '<td>' +
-                        '<button class="btn btn-danger" type="button">Delete</button>' +
+                        '<button class="btn btn-danger delete-btn" type="button" data-bs-toggle="modal" data-bs-target="#deleteModal">Delete</button>' +
                     '</td>' +
                 '</tr>';
         }
     })
     .catch(error => {
-        console.log("Another error");
+        console.log("Products final error");
     })
 }
 
