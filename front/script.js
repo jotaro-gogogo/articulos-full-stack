@@ -5,6 +5,7 @@ const eventsTable = document.getElementById('events-table');
 const insertBtn = document.getElementById('insert-btn');
 const listItems = document.querySelectorAll('ul li a');
 const unitInput = document.getElementById('product-unit');
+unitInput.value = '';
 
 ready();
 
@@ -129,23 +130,29 @@ listItems.forEach(item => {
         unitInput.value = item.innerHTML;
     });
 });
-/*
+
 insertBtn.addEventListener('click', () => {
     let product = {
-        name = document.getElementById('product-name').value,
-        unit = document.getElementById('product-unit').value,
-        productKey = document.getElementById('product-key').value,
-        price = document.getElementById('product-price').value
+        name: document.getElementById('product-name').value,
+        unit: document.getElementById('product-unit').value,
+        productKey: document.getElementById('product-key').value,
+        price: document.getElementById('product-price').value
     };
-    
-    /fetch('http://localhost:9001/products/save', {
+
+    fetch('http://localhost:9001/products/save', {
         method: 'POST',
         headers: {
             'Content-Type': 'application-json'
         },
         body: JSON.stringify(product)
-    });/
-});*/
+    })
+    .then(response => {
+        if (!response.ok)
+            alert("Try again");
+        else
+            alert("Product registered correctly");
+    })
+});
 
 
 
