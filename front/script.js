@@ -4,8 +4,7 @@ const productsTable = document.getElementById('products-table');
 const eventsTable = document.getElementById('events-table');
 const insertBtn = document.getElementById('insert-btn');
 const listItems = document.querySelectorAll('ul li a');
-const unitInput = document.getElementById('product-unit');
-unitInput.value = '';
+
 
 ready();
 
