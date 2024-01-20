@@ -3,6 +3,8 @@ const eventsBtn = document.getElementById('events-btn');
 const productsTable = document.getElementById('products-table');
 const eventsTable = document.getElementById('events-table');
 const insertBtn = document.getElementById('insert-btn');
+const listItems = document.querySelectorAll('ul li a');
+const unitInput = document.getElementById('product-unit');
 
 ready();
 
@@ -107,7 +109,7 @@ productsBtn.addEventListener('click', () => {
     eventsBtn.classList.remove('btn-outline-success');
 
     productsTable.removeAttribute("hidden");
-    eventsTable.setAttribute("hidden", true);
+    eventsTable.setAttribute("hidden", 'true');
 });
 
 eventsBtn.addEventListener('click', () => {
@@ -118,25 +120,32 @@ eventsBtn.addEventListener('click', () => {
     productsBtn.classList.remove('btn-outline-success');
 
     eventsTable.removeAttribute("hidden");
-    productsTable.setAttribute("hidden", true);
+    productsTable.setAttribute("hidden", 'true');
 });
 
+listItems.forEach(item => {
+    item.addEventListener('click', () => {
+        event.preventDefault();
+        unitInput.value = item.innerHTML;
+    });
+});
+/*
 insertBtn.addEventListener('click', () => {
     let product = {
         name = document.getElementById('product-name').value,
         unit = document.getElementById('product-unit').value,
-        productKey = document.getElementById('product-key').value
+        productKey = document.getElementById('product-key').value,
         price = document.getElementById('product-price').value
     };
     
-    /*fetch('http://localhost:9001/products/save', {
+    /fetch('http://localhost:9001/products/save', {
         method: 'POST',
         headers: {
             'Content-Type': 'application-json'
         },
         body: JSON.stringify(product)
-    });*/
-});
+    });/
+});*/
 
 
 
