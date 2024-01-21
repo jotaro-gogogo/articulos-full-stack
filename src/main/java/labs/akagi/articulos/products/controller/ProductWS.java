@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("products")
-@CrossOrigin()
+@CrossOrigin
 public class ProductWS {
     @Autowired
     ProductImp imp;
@@ -38,7 +38,7 @@ public class ProductWS {
         return imp.pShow();
     }
 
-    @GetMapping("search")
+    @PostMapping("search")
     Response pSearchWS(@RequestBody Integer id) {
         return imp.pSearch(id);
     }

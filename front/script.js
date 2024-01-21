@@ -45,7 +45,7 @@ function loadProducts() {
                     '<td>' + query[i].productKey + '</td>' +
                     '<td>' + query[i].price + '</td>' +
                     '<td>' +
-                        '<button class="btn btn-warning update-btn" type="button" data-bs-toggle="modal" data-bs-target="#updateModal">Update</button>' +
+                        '<button class="btn btn-warning update-btn" type="button" data-bs-toggle="modal" data-bs-target="#updateModal" onclick="search(' + query[i].id + ')">Update</button>' +
                     '</td>' +
                     '<td>' +
                         '<button class="btn btn-danger delete-btn" type="button" data-bs-toggle="modal" data-bs-target="#deleteModal">Delete</button>' +
@@ -97,6 +97,24 @@ function convertDate(date) {
     date = date.replace(/T/, ' ');
     date = date.split('+');
     return date[0];
+}
+
+function search(prodId) {
+    fetch('http://localhost:9001/products/search', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: prodId
+    })
+    .then(response => {
+        if (!response.ok)
+            console.log("Error searching");
+        return response.json();
+    })
+    .then(data => {
+        console.log(data);
+    })
 }
 
 // Listeners
