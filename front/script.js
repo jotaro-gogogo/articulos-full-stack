@@ -2,8 +2,11 @@ const productsBtn = document.getElementById('products-btn');
 const eventsBtn = document.getElementById('events-btn');
 const productsTable = document.getElementById('products-table');
 const eventsTable = document.getElementById('events-table');
+const insertModal = document.querySelectorAll('#insertModal input');
 const insertBtn = document.getElementById('insert-btn');
 const listItems = document.querySelectorAll('ul li a');
+const unitInput = document.getElementById('product-unit');
+const addBtn = document.getElementById('add-btn');
 
 ready();
 
@@ -48,7 +51,7 @@ function loadProducts() {
                         '<button class="btn btn-warning update-btn" type="button" data-bs-toggle="modal" data-bs-target="#updateModal" onclick="search(' + query[i].id + ')">Update</button>' +
                     '</td>' +
                     '<td>' +
-                        '<button class="btn btn-danger delete-btn" type="button" data-bs-toggle="modal" data-bs-target="#deleteModal">Delete</button>' +
+                        '<button class="btn btn-danger delete-btn" type="button" data-bs-toggle="modal" data-bs-target="#deleteModal" onclick="delete(' + query[i].id + ')">Delete</button>' +
                     '</td>' +
                 '</tr>';
         }
@@ -142,8 +145,13 @@ eventsBtn.addEventListener('click', () => {
 
 listItems.forEach(item => {
     item.addEventListener('click', () => {
-        event.preventDefault();
         unitInput.value = item.innerHTML;
+    });
+});
+
+addBtn.addEventListener('click', () => {
+    insertModal.forEach(input => {
+        input.value = '';
     });
 });
 

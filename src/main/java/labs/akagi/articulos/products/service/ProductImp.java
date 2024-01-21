@@ -21,13 +21,11 @@ public class ProductImp implements ProductMethods {
     @Override
     public Response pSave(Product p) {
         if (validate(p)) {
-            if (pDao.findAll().isEmpty() || !pDao.existsById(p.getId()) || !pDao.existsByProductKey(p.getProductKey())) {
+            if (pDao.findAll().isEmpty() || !pDao.existsByProductKey(p.getProductKey())) {
                 pDao.save(p);
                 // Mandar "guardar" a la clase Evento
                 return new Response("Product was saved correctly", p, true);
-            } else if (pDao.existsById(p.getId()))
-                return new Response("Product ID was already registered in the database, please verify your information.", null, false);
-            else if (pDao.existsByProductKey(p.getProductKey()))
+            } else if (pDao.existsByProductKey(p.getProductKey()))
                 return new Response("Cannot save, this product key already exists on the database:", pDao.findByProductKey(p.getProductKey()), false);
             else
                 return new Response("Cannot save product, please verify your information.", null, false);
@@ -40,11 +38,13 @@ public class ProductImp implements ProductMethods {
         if (validate(p)) {
             if (pDao.findAll().isEmpty())
                 return new Response("Database empty, cannot update anything", null, false);
+            /* No need for this, as we already gather the values directly from the database
             else if (pDao.existsById(p.getId())) {
                 pDao.save(p);
                 // Llamar a clase evento
                 return new Response("Product was correctly updated", p, true);
-            } else
+            }*/
+            else
                 return new Response("Product ID could not be found on database, please verify your information.", null, false);
         } else
             return new Response("Product data does not conforms to requirements, please verify your information.", null, false);
