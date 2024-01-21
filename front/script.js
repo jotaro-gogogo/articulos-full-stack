@@ -2,11 +2,12 @@ const productsBtn = document.getElementById('products-btn');
 const eventsBtn = document.getElementById('events-btn');
 const productsTable = document.getElementById('products-table');
 const eventsTable = document.getElementById('events-table');
-const insertModal = document.querySelectorAll('#insertModal input');
 const insertBtn = document.getElementById('insert-btn');
 const listItems = document.querySelectorAll('ul li a');
 const unitInput = document.getElementById('product-unit');
 const addBtn = document.getElementById('add-btn');
+const insertModalInputs = document.querySelectorAll('#insertModal input');
+
 
 ready();
 
@@ -150,7 +151,7 @@ listItems.forEach(item => {
 });
 
 addBtn.addEventListener('click', () => {
-    insertModal.forEach(input => {
+    insertModalInputs.forEach(input => {
         input.value = '';
     });
 });
@@ -174,7 +175,13 @@ insertBtn.addEventListener('click', () => {
         if (!response.ok)
             alert("Try again");
         else
-            alert("Product registered correctly");
+            return response.json();
+    })
+    .then(data => {
+        if (!data.success)
+            alert(data.msg);
+        else
+        alert(data.msg);
     })
 });
 
